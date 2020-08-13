@@ -7,7 +7,7 @@ class App extends React.Component {
   state = { term: [], selectedVideo: null };
 
   componentDidMount() {
-    this.onTermSubmit("Cars");
+    this.onTermSubmit("House MD");
   }
   onTermSubmit = async (term) => {
     const KEY = "AIzaSyDIWyl_Mo4PDt6W0vc8uv0p6kJK7Wiw9u8";
@@ -21,7 +21,7 @@ class App extends React.Component {
     });
     this.setState({
       term: response.data.items,
-      selectedVideo: response.data.items[0],
+      selectedVideo: response.data.items[1],
     });
   };
 
